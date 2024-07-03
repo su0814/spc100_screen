@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/new/photo">
+        <file>qrc/logo.ico</file>
+        <file>qrc/logo.png</file>
+        <file>qrc/add.png</file>
+        <file>qrc/minus.png</file>
+        <file>qrc/run.png</file>
+        <file>qrc/safe.png</file>
+        <file>qrc/serial.png</file>
+        <file>qrc/status.png</file>
+        <file>qrc/led_green.png</file>
+        <file>qrc/led_grey.png</file>
+        <file>qrc/led_red.png</file>
+        <file>qrc/left_off.png</file>
+        <file>qrc/left_on.png</file>
+        <file>qrc/right_off.png</file>
+        <file>qrc/right_on.png</file>
+        <file>qrc/uswitch_close.png</file>
+        <file>qrc/uswitch_open.png</file>
+        <file>qrc/encode.png</file>
+        <file>qrc/motor.png</file>
+        <file>qrc/encode_qrc.png</file>
+        <file>qrc/output.png</file>
+        <file>qrc/sensor.png</file>
+        <file>qrc/error.png</file>
+    </qresource>
+</RCC>
