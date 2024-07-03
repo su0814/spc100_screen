@@ -1,0 +1,44 @@
+# 工程文件
+JLinkLog.txt
+EventRecorderStub.scvd
+*.scvd
+*.uvguix.*
+*.uvoptx
+JLinkSettings.ini
+
+# C语言编译文件
+*.d
+*.o
+*.crf
+*.axf
+*.htm
+*.lnp
+*.sct
+*.dep
+*.elf
+*.hex
+*.iex
+*.map
+*.lst
+*.bin
+*.Bak
+*.bak
+*.__i
+*.BAT
+*.ini
+*._ia
+# 崩溃文件
+*.stackdump
+
+# 文档
+doc/
+
+# 自动版本
+auto_version.h
+
+# vscode
+.vscode/
+
+#工具
+*.jscope
+*.jflash

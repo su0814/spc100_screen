@@ -11,8 +11,6 @@
 #define DO_NUM         6
 #define OFFLINE        "离线"
 
-#define DI_DATA_RESET 0XFFFF
-#define DO_DATA_RESET 0XFF
 enum {
     MCU_A = 0,
     MCU_B,
@@ -29,6 +27,13 @@ typedef enum {
     RADAR_WF,
     RADAR_AUTO,
 } radar_e;
+
+enum {
+    PI_IS_COUNTER = 0,
+    PI_IS_ENCODER,
+    PI_IS_DI,
+};
+
 class MainWindow;
 class status : public QWidget {
     Q_OBJECT
@@ -67,9 +72,9 @@ private:
     void can_pdo2_callback(uint8_t mcu_id, uint8_t len, QByteArray data);
     void can_pdo3_callback(uint8_t mcu_id, uint8_t len, QByteArray data);
 
-    void di_status_config(uint8_t mcu_id, uint16_t data);
-    void do_status_config(uint8_t mcu_id, uint8_t data);
-    void error_status_config(uint8_t mcu_id, uint8_t data);
+    void di_status_config(uint8_t mcu_id, uint16_t data, bool reset = false);
+    void do_status_config(uint8_t mcu_id, uint8_t data, bool reset = false);
+    void error_status_config(uint8_t mcu_id, uint8_t data, bool reset = false);
     /* 指示灯 */
     void set_led(QLabel* label, label_color_e color);
 signals:

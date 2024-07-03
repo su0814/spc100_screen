@@ -32,17 +32,21 @@ void status::status_ui_init()
     connect(a_heartbeat_timer, &QTimer::timeout, this, &status::b_heartbeat_timeout_slot);
 }
 
-void status::di_status_config(uint8_t mcu_id, uint16_t data)
+void status::di_status_config(uint8_t mcu_id, uint16_t data, bool reset)
 {
     if (mcu_id >= MCU_NUM) {
         return;
     }
-    QLabel* led_label[2][6] = { { ui->estop_led1_label, ui->pf_leda_label, ui->wf_leda_label, ui->af_leda_label, ui->switch1_a_label, ui->switch2_label },
-                                { ui->estop_led2_label, ui->pf_ledb_label, ui->wf_ledb_label, ui->af_ledb_label, ui->switch1_b_label, ui->switch3_label } };
+    QLabel* led_label[2][12] = {
+        { ui->switch1_a_label, ui->switch2_a_label, ui->switch3_a_label, ui->switch4_a_label, ui->switch5_a_label, ui->switch6_a_label, ui->switch7_a_label,
+          ui->switch8_a_label, ui->switch9_a_label, ui->switch10_a_label, ui->switch11_a_label, ui->switch12_a_label },
+        { ui->switch1_b_label, ui->switch2_b_label, ui->switch3_b_label, ui->switch4_b_label, ui->switch5_b_label, ui->switch6_b_label, ui->switch7_b_label,
+          ui->switch8_b_label, ui->switch9_b_label, ui->switch10_b_label, ui->switch11_b_label, ui->switch12_b_label }
+    };
 
-    for (uint8_t i = 0; i < 6; i++) {
+    for (uint8_t i = 0; i < 12; i++) {
         QPixmap source_pix;
-        if (data == DI_DATA_RESET) {
+        if (reset) {
             source_pix.load(":/new/photo/qrc/led_grey.png");
         } else {
             if ((data & (0x01 << i)) != 0) {
@@ -51,47 +55,11 @@ void status::di_status_config(uint8_t mcu_id, uint16_t data)
                 source_pix.load(":/new/photo/qrc/led_red.png");
             }
         }
-        QPixmap pix;
-        if (i == 0) {
-            pix = source_pix.scaled(100, 100);
-        } else if (i >= 4 && i <= 5) {
-            pix = source_pix.scaled(100, 100);
-        } else {
-            pix = source_pix.scaled(80, 80);
-        }
-        QPainter painter(&pix);
-        painter.setPen(Qt::black);            // 设置文字颜色
-        painter.setFont(QFont("Arial", 20));  // 设置文字字体和大小
-        if (mcu_id == MCU_A) {
-            painter.drawText(pix.height() * 40 / 100, pix.width() * 60 / 100, "A");  // 在指定位置绘制文字
-        } else {
-            painter.drawText(pix.height() * 40 / 100, pix.width() * 60 / 100, "B");  // 在指定位置绘制文字
-        }
-        led_label[mcu_id][i]->setFixedSize(pix.width(), pix.height());
-        led_label[mcu_id][i]->setPixmap(pix);
+        led_label[mcu_id][i]->setPixmap(source_pix.scaled(80, 80));
     }
-    QString ref_on_str[2]  = { ":/new/photo/qrc/left_on.png", ":/new/photo/qrc/right_on.png" };
-    QString ref_off_str[2] = { ":/new/photo/qrc/left_off.png", ":/new/photo/qrc/right_off.png" };
-    QLabel* ref_label[2]   = { ui->ref_left_label, ui->ref_right_label };
-    QPixmap ref_source_pix;
-    if ((data == DI_DATA_RESET) || ((data & (0x01 << 6)) != 0)) {
-        ref_source_pix.load(ref_off_str[mcu_id]);
-    } else {
-        ref_source_pix.load(ref_on_str[mcu_id]);
-    }
-    ref_label[mcu_id]->setPixmap(ref_source_pix.scaled(200, 250));
-
-    QLabel* u_label[2] = { ui->uswitch1_label, ui->uswitch2_label };
-    QPixmap u_source_pix;
-    if ((data == DI_DATA_RESET) || ((data & (0x01 << 7)) != 0)) {
-        u_source_pix.load(":/new/photo/qrc/uswitch_open.png");
-    } else {
-        u_source_pix.load(":/new/photo/qrc/uswitch_close.png");
-    }
-    u_label[mcu_id]->setPixmap(u_source_pix);
 }
 
-void status::do_status_config(uint8_t mcu_id, uint8_t data)
+void status::do_status_config(uint8_t mcu_id, uint8_t data, bool reset)
 {
 #define DO_LED_SIZE 140
     QLabel* relay1_label[2] = { ui->relay1_a_label, ui->relay1_b_label };
@@ -99,7 +67,7 @@ void status::do_status_config(uint8_t mcu_id, uint8_t data)
     QLabel* mos_label[4]    = { ui->mos1_label, ui->mos2_label, ui->mos3_label, ui->mos4_label };
     for (uint8_t i = 0; i < 6; i++) {
         QPixmap source_pix;
-        if (data == DO_DATA_RESET || ((data & (0x01 << i)) == 0)) {
+        if (reset || ((data & (0x01 << i)) == 0)) {
             source_pix.load(":/new/photo/qrc/led_grey.png");
         } else {
             source_pix.load(":/new/photo/qrc/led_green.png");
@@ -114,15 +82,15 @@ void status::do_status_config(uint8_t mcu_id, uint8_t data)
     }
 }
 
-void status::error_status_config(uint8_t mcu_id, uint8_t data)
+void status::error_status_config(uint8_t mcu_id, uint8_t data, bool reset)
 {
-    QLabel* error_label[2][6] = { { ui->power_error_a_label, ui->scheck_error_a_label, ui->ccheck_error_a_label, ui->com_error_a_label,
+    QLabel* error_label[2][6] = { { ui->power_error_a_label, ui->element_error_a_label, ui->version_error_a_label, ui->com_error_a_label,
                                     ui->output_error_a_label, ui->input_error_a_label },
-                                  { ui->power_error_b_label, ui->scheck_error_b_label, ui->ccheck_error_b_label, ui->com_error_b_label,
+                                  { ui->power_error_b_label, ui->element_error_b_label, ui->version_error_b_label, ui->com_error_b_label,
                                     ui->output_error_b_label, ui->input_error_b_label } };
     for (uint8_t i = 0; i < 6; i++) {
         QPixmap source_pix;
-        if (data == DO_DATA_RESET) {
+        if (reset) {
             source_pix.load(":/new/photo/qrc/led_grey.png");
         } else if (((data & (0x01 << i)) == 0)) {
             source_pix.load(":/new/photo/qrc/led_green.png");
@@ -205,51 +173,45 @@ void status::can_pdo0_callback(uint8_t mcu_id, uint8_t len, QByteArray data)
 {
     QCheckBox* ss[MCU_NUM] = { ui->a_safe_status_checkBox, ui->b_safe_status_checkBox };
     QLabel*    sf[MCU_NUM] = { ui->a_sf_code_label, ui->b_sf_code_label };
-    if (len < 8) {
+    if (len < 6) {
         return;
     }
     uint8_t  safety_status = data[1];
-    uint16_t error_type    = data[2] | (data[3] << 8);
-    uint8_t  sf_code       = data[4];
-    uint16_t di_state      = data[5] | (data[6] << 8);
-    uint8_t  do_state      = data[7];
-    if (safety_status == 1) {
+    uint8_t  error_type    = data[2];
+    uint16_t di_state      = data[3] | (data[4] << 8);
+    uint8_t  do_state      = data[5];
+    if (safety_status == 0) {
         ss[mcu_id]->setChecked(false);
     } else {
         ss[mcu_id]->setChecked(true);
     }
     di_status_config(mcu_id, di_state);
-    sf[mcu_id]->setText("0x" + QString::number(sf_code, 16));
+    sf[mcu_id]->setText("0x" + QString::number(safety_status, 16));
     do_status_config(mcu_id, do_state);
     error_status_config(mcu_id, error_type);
 }
 
 void status::can_pdo1_callback(uint8_t mcu_id, uint8_t len, QByteArray data)
 {
-    if (len < 5) {
+    if (len < 6) {
         return;
     }
     QProgressBar* ai1_pro[2] = { ui->ai1_a_progressBar, ui->ai1_b_progressBar };
     QProgressBar* ai2_pro[2] = { ui->ai2_a_progressBar, ui->ai2_b_progressBar };
     uint16_t      ai1        = data[0] | data[1] << 8;
     uint16_t      ai2        = data[2] | data[3] << 8;
-    uint8_t       dir        = data[4];
     QString       str;
     if (mcu_id == MCU_A) {
         str = "A: ";
     } else {
         str = "B: ";
     }
-    double ai1_v = ai1 * 249.5 / 33579.0;
-    double ai2_v = ai2 * 249.5 / 33579.0;
+    double ai1_v = ai1 / 1000.0;
+    double ai2_v = ai2 / 1000.0;
     ai1_pro[mcu_id]->setValue(ai1);
     ai1_pro[mcu_id]->setFormat(str + QString::number(ai1_v, 'f', 2) + "V");
     ai2_pro[mcu_id]->setValue(ai2);
     ai2_pro[mcu_id]->setFormat(QString::number(ai2_v, 'f', 2) + "V");
-    qep1_dir    = dir & 0x01;
-    qep2_dir    = (dir >> 1) & 0x01;
-    pi_qep1_dir = (dir >> 2) & 0x01;
-    pi_qep2_dir = (dir >> 3) & 0x01;
 }
 
 void status::can_pdo2_callback(uint8_t mcu_id, uint8_t len, QByteArray data)
@@ -257,8 +219,12 @@ void status::can_pdo2_callback(uint8_t mcu_id, uint8_t len, QByteArray data)
     if (len < 8) {
         return;
     }
-    qep1_data = data[0] | data[1] << 8 | data[2] << 16 | data[3] << 24;
-    qep2_data = data[4] | data[5] << 8 | data[6] << 16 | data[7] << 24;
+    uint32_t data1 = data[0] | data[1] << 8 | data[2] << 16 | data[3] << 24;
+    uint32_t data2 = data[4] | data[5] << 8 | data[6] << 16 | data[7] << 24;
+    qep1_data      = data1 & 0x7ffffff;
+    qep2_data      = data2 & 0x7ffffff;
+    qep1_dir       = (data1 >> 27) & 0x01;
+    qep2_dir       = (data2 >> 27) & 0x01;
     ui->motor1_fr_label->setText(QString::number(qep1_data) + " pulse/s");
     ui->motor2_fr_label->setText(QString::number(qep2_data) + " pulse/s");
 }
@@ -269,13 +235,53 @@ void status::can_pdo3_callback(uint8_t mcu_id, uint8_t len, QByteArray data)
         ui->can_config_log_textBrowser->append("pdo3 len error");
         return;
     }
-    uint32_t pi1 = data[0] | data[1] << 8 | data[2] << 16 | data[3] << 24;
-    uint32_t pi2 = data[4] | data[5] << 8 | data[6] << 16 | data[7] << 24;
+    uint32_t data1 = data[0] | data[1] << 8 | data[2] << 16 | data[3] << 24;
+    uint32_t data2 = data[4] | data[5] << 8 | data[6] << 16 | data[7] << 24;
+    uint8_t  af1   = (data1 >> 25) & 0x03;
+    uint8_t  af2   = (data2 >> 25) & 0x03;
 
-    if (mcu_id == MCU_A) {
-        pi_qep1_data = pi1 > pi2 ? pi1 : pi2;
-    } else {
-        pi_qep2_data = pi1 > pi2 ? pi1 : pi2;
+    switch (af1) {
+    case PI_IS_COUNTER:
+        if (mcu_id == MCU_A) {
+            pi_qep1_data = (data1 & 0X1FFFFFF);
+            pi_qep1_dir  = 0;
+        } else {
+            pi_qep2_data = (data1 & 0X1FFFFFF);
+            pi_qep2_dir  = 0;
+        }
+        break;
+    case PI_IS_ENCODER:
+        pi_qep1_data = (data1 & 0X1FFFFFF);
+        pi_qep1_dir  = ((data1 >> 27) & 0X1);
+        break;
+    case PI_IS_DI:
+        pi_qep1_data = 0;
+        pi_qep1_dir  = 0;
+        break;
+    default:
+        break;
+    }
+
+    switch (af2) {
+    case PI_IS_COUNTER:
+        if (mcu_id == MCU_A) {
+            pi_qep1_data = (data2 & 0X1FFFFFF);
+            pi_qep1_dir  = 0;
+        } else {
+            pi_qep2_data = (data2 & 0X1FFFFFF);
+            pi_qep2_dir  = 0;
+        }
+        break;
+    case PI_IS_ENCODER:
+        pi_qep2_data = (data2 & 0X1FFFFFF);
+        pi_qep2_dir  = ((data2 >> 27) & 0X1);
+        break;
+    case PI_IS_DI:
+        pi_qep2_data = 0;
+        pi_qep2_dir  = 0;
+        break;
+    default:
+        break;
     }
     ui->encode1_fr_label->setText(QString::number(pi_qep1_data) + " pulse/s");
     ui->encode2_fr_label->setText(QString::number(pi_qep2_data) + " pulse/s");
@@ -337,12 +343,12 @@ void status::reset_ui_data()
     qep2_data    = 0;
     pi_qep1_data = 0;
     pi_qep2_data = 0;
-    di_status_config(MCU_A, DI_DATA_RESET);
-    di_status_config(MCU_B, DI_DATA_RESET);
-    do_status_config(MCU_A, DO_DATA_RESET);
-    do_status_config(MCU_B, DO_DATA_RESET);
-    error_status_config(MCU_A, DO_DATA_RESET);
-    error_status_config(MCU_B, DO_DATA_RESET);
+    di_status_config(MCU_A, 0, true);
+    di_status_config(MCU_B, 0, true);
+    do_status_config(MCU_A, 0, true);
+    do_status_config(MCU_B, 0, true);
+    error_status_config(MCU_A, 0, true);
+    error_status_config(MCU_B, 0, true);
     QPixmap qep_source(":/new/photo/qrc/motor.png");
 
     qep1_pix = qep_source.scaled(200, 200);

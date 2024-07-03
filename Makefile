@@ -886,9 +886,9 @@ moc_mainwindow.cpp: mainwindow.h \
 
 moc_status.cpp: status.h \
 		ui_mainwindow.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QVariant \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvariant.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPainter \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpainter.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtguiglobal.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobal.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qconfig-bootstrapped.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qconfig.h \
@@ -900,25 +900,41 @@ moc_status.cpp: status.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsysinfo.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlogging.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qflags.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobalstatic.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmutex.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnumeric.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qversiontagging.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasicatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_bootstrap.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qgenericatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_cxx11.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_msvc.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearray.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrefcount.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobalstatic.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmutex.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnumeric.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qversiontagging.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtgui-config.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnamespace.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qarraydata.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrect.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmargins.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsize.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpoint.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qscopedpointer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpaintdevice.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs_impl.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs_win.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcolor.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgb.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qalgorithms.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiterator.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrefcount.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qarraydata.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhashfunctions.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstring.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qchar.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearray.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringliteral.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringalgorithms.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringview.h \
@@ -926,136 +942,61 @@ moc_status.cpp: status.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpair.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvector.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontainertools_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpoint.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearraylist.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qregexp.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringmatcher.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgba64.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qshareddata.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhash.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer_impl.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreevent.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmetatype.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvarlengtharray.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontainerfwd.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmap.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdebug.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhash.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtextstream.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiodevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreevent.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qscopedpointer.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlocale.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qshareddata.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qset.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontiguouscache.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QApplication \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgetsglobal.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtguiglobal.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtgui-config.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgets-config.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qeventloop.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs_win.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsize.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmargins.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcursor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qdesktopwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpaintdevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrect.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpalette.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcolor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgb.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgba64.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qbrush.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qimage.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixelformat.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtransform.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qmatrix.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpolygon.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qregion.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdatastream.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiodevice.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qline.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtransform.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qimage.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixelformat.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextoption.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpen.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qbrush.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontinfo.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfont.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontmetrics.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontinfo.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPixmap \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QTimer \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtimer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasictimer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qwidget.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgetsglobal.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgets-config.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpalette.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qsizepolicy.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcursor.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qkeysequence.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qevent.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvariant.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdebug.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtextstream.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlocale.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qset.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontiguouscache.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qurl.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qurlquery.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qfile.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qfiledevice.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qvector2d.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtouchdevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qguiapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qinputmethod.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QCheckBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcheckbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qicon.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QComboBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcombobox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractitemdelegate.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstyleoption.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractspinbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qvalidator.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qregularexpression.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qslider.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractslider.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstyle.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtabbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtabwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qrubberband.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qframe.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qabstractitemmodel.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGridLayout \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgridlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayoutitem.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qboxlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGroupBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgroupbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QLabel \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlabel.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMainWindow \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmainwindow.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMenuBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenubar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenu.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qaction.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qactiongroup.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QProgressBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qprogressbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QPushButton \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qpushbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QSpinBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qspinbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QStatusBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstatusbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTabWidget \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTextBrowser \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextbrowser.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextedit.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractscrollarea.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextdocument.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextoption.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextcursor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextformat.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpen.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPainter \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpainter.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPixmap \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QTimer \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtimer.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasictimer.h \
 		moc_predefs.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/bin/moc
 	/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/bin/moc $(DEFINES) --include /home/h/QT/spc100_screen/spc100_screen/moc_predefs.h -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/mkspecs/linux-arm-gnueabi-g++ -I/home/h/QT/spc100_screen/spc100_screen -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/include -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus -I/home/h/QT/qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.2.1 -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.2.1/arm-linux-gnueabihf -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/8.2.1/backward -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.2.1/include -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/8.2.1/include-fixed -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/include -I/home/h/QT/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include status.h -o moc_status.cpp
@@ -1356,57 +1297,14 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qabstractitemmodel.h \
 		status.h \
 		ui_mainwindow.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QVariant \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QApplication \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qeventloop.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qdesktopwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qguiapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qinputmethod.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QCheckBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcheckbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QComboBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcombobox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractitemdelegate.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGridLayout \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgridlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayoutitem.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qboxlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGroupBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgroupbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QLabel \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlabel.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMenuBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenubar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenu.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qaction.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qactiongroup.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QProgressBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qprogressbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QPushButton \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qpushbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QSpinBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qspinbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QStatusBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstatusbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTabWidget \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTextBrowser \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextbrowser.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextedit.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractscrollarea.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextdocument.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextcursor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextformat.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPixmap \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QTimer \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtimer.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasictimer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QDebug \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QDesktopWidget \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qdesktopwidget.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMessageBox \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmessagebox.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qdialog.h
@@ -1414,9 +1312,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 
 status.o: status.cpp status.h \
 		ui_mainwindow.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QVariant \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvariant.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPainter \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpainter.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtguiglobal.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobal.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qconfig-bootstrapped.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qconfig.h \
@@ -1428,25 +1326,41 @@ status.o: status.cpp status.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsysinfo.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlogging.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qflags.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobalstatic.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmutex.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnumeric.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qversiontagging.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasicatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_bootstrap.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qgenericatomic.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_cxx11.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qatomic_msvc.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearray.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrefcount.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qglobalstatic.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmutex.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnumeric.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qversiontagging.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtgui-config.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qnamespace.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qarraydata.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrect.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmargins.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsize.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpoint.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qscopedpointer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpaintdevice.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs_impl.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs_win.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcolor.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgb.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qalgorithms.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiterator.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrefcount.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qarraydata.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhashfunctions.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstring.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qchar.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearray.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringliteral.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringalgorithms.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringview.h \
@@ -1454,136 +1368,61 @@ status.o: status.cpp status.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpair.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvector.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontainertools_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qpoint.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbytearraylist.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringlist.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qregexp.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qstringmatcher.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgba64.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qshareddata.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhash.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer_impl.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreevent.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmetatype.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvarlengtharray.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontainerfwd.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobjectdefs_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmap.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdebug.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qhash.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtextstream.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiodevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreevent.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qscopedpointer.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qobject_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlocale.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qshareddata.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qset.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontiguouscache.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsharedpointer_impl.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QApplication \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgetsglobal.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtguiglobal.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtgui-config.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgets-config.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcoreapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qeventloop.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qwindowdefs_win.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qsize.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmargins.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcursor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qdesktopwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpaintdevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qrect.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpalette.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcolor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgb.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qrgba64.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qbrush.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qimage.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixelformat.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtransform.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qmatrix.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpolygon.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qregion.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdatastream.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qiodevice.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qline.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtransform.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qimage.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixelformat.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpixmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextoption.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpen.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qbrush.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontinfo.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfont.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontmetrics.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qfontinfo.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPixmap \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QTimer \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtimer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasictimer.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qwidget.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgetsglobal.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtwidgets-config.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpalette.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qsizepolicy.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qcursor.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qkeysequence.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qevent.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qvariant.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qmap.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qdebug.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtextstream.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qlocale.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qset.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qcontiguouscache.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qurl.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qurlquery.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qfile.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qfiledevice.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qvector2d.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtouchdevice.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qguiapplication.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qinputmethod.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QCheckBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcheckbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qicon.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QComboBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qcombobox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractitemdelegate.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstyleoption.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractspinbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qvalidator.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qregularexpression.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qslider.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractslider.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstyle.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtabbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtabwidget.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qrubberband.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qframe.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qabstractitemmodel.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGridLayout \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgridlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlayoutitem.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qboxlayout.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QGroupBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qgroupbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QLabel \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qlabel.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMainWindow \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmainwindow.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMenuBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenubar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmenu.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qaction.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qactiongroup.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QProgressBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qprogressbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QPushButton \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qpushbutton.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QSpinBox \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qspinbox.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QStatusBar \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qstatusbar.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTabWidget \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QTextBrowser \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextbrowser.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtextedit.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qabstractscrollarea.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextdocument.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextoption.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextcursor.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qtextformat.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpen.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QWidget \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPainter \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qpainter.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QPixmap \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QTimer \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qtimer.h \
-		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/qbasictimer.h \
 		mainwindow.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus/QCanBus \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus/qcanbus.h \
@@ -1594,6 +1433,10 @@ status.o: status.cpp status.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus/qcanbusdeviceinfo.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus/QCanBusDevice \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtSerialBus/QCanBusFrame \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/QMainWindow \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qmainwindow.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtWidgets/qtabwidget.h \
+		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qicon.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/QBitmap \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtGui/qbitmap.h \
 		../../qt-everywhere-src-5.15.0/qt5.15_lib/include/QtCore/QDebug \
