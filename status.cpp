@@ -29,7 +29,7 @@ void status::status_ui_init()
     connect(a_heartbeat_timer, &QTimer::timeout, this, &status::a_heartbeat_timeout_slot);
     b_heartbeat_timer = new QTimer(this);
     b_heartbeat_timer->setSingleShot(true);
-    connect(a_heartbeat_timer, &QTimer::timeout, this, &status::b_heartbeat_timeout_slot);
+    connect(b_heartbeat_timer, &QTimer::timeout, this, &status::b_heartbeat_timeout_slot);
 }
 
 void status::di_status_config(uint8_t mcu_id, uint16_t data, bool reset)
